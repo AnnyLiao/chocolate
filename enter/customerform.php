@@ -1,0 +1,160 @@
+<html>
+<head>
+	<title>LOVE CHOCOLATE</title>
+<meta charset="utf-8">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+		 <script type="text/javascript">
+  function chk(){
+    if(document.form1.id.value==''){
+      alert('帳號未填');
+      document.form1.id.focus();
+      return false;
+    }
+    if(document.form1.password.value==''){
+      alert('密碼未填');
+      document.form1.password.focus();
+      return false;
+    }
+	if(document.form1.name.value==''){
+      alert('姓名未填');
+      document.form1.name.focus();
+      return false;
+    }
+	if(document.form1.email.value==''){
+      alert('信箱未填');
+      document.form1.email.focus();
+      return false;
+    }
+   
+  if(document.form1.telephone.value==''){
+      alert('電話未填');
+      document.form1.telephone.focus();
+      return false;
+    }
+  
+  if(document.form1.address.value==''){
+      alert('地址未填');
+      document.form1.address.focus();
+      return false;
+    }
+    return true;
+  }
+  </script>
+</head>
+<body>
+<?php
+						if(isset($_GET['id'])){
+						$id=$_GET['id'];
+						
+						}
+						
+						?>
+
+	<div id="page">
+		<div id="sidebar"> <a href="indexEnter.php?id=<?php echo $id;?>"><img id="logo" src="image1/logo.gif" width="220" height="350" alt=""></a>
+			<h2>FLAVOR OF THE DAY</h2>
+			<ul>
+				<li>
+					<a href="flavors.php"><img src="image1/c1.jpg" width="165" height="165" alt=""></a>
+					<h3><a href="flavors.php">Gift Chocolate</a></h3>
+				</li>
+			</ul>
+			<h2>POPULAR FLAVORS</h2>
+			<ul>
+				<li>
+					<a href="flavors.php"><img src="image1/c2.jpg" width="165" height="165" alt=""></a>
+					<h3><a href="flavors.php">Heart Chocolate</a></h3>
+				</li>
+				<li>
+					<a href="flavors.php"><img src="image1/c3.png" width="165" height="165" alt=""></a>
+					<h3><a href="flavors.php">Nut Chocolate</a></h3>
+				</li>
+				<li>
+					<a href="flavors.php"><img src="image1/c4.jpg" width="165" height="165" alt=""></a>
+					<h3><a href="flavors.php">Tiny ball Chocolate</a></h3>
+				</li>
+			</ul>
+		</div>
+		<div id="content"> 
+			<!-- start of header -->
+			<div id="header">
+				<ul class="navigation">
+					<li>
+						<a href="about.php?id=<?php echo $id;?>">About Us</a>
+					</li>
+					<li>
+						<a href="flavors.php?id=<?php echo $id;?>">Chocolate</a>
+					</li>
+					<li>
+						<a href="customerform.php?id=<?php echo $id;?>">Join us</a>
+					</li>
+					
+					<li>
+						<a href="board.php?id=<?php echo $id;?>">Contact Us</a>
+					</li>
+					 </li>
+					
+<li style="margin-left:20px; font-family: Microsoft JhengHei;font-size: 14px;">
+						
+						<font color="#000088"><?php echo $id;?>歡迎光臨</font>
+						
+					</li>
+				</ul>
+				<a href="../index.html" style="padding: 0px 0px 0px 10px;"><font color="#FF0000">登出</font></a>
+			</div>
+			<!-- end of header --> 
+			<!-- start of class content -->
+			<div class="content"> 
+				<!-- start of slider-->
+				<div class="slider">
+					<form id="form1" name="form1" method="get" action="customerinsert.php" onsubmit="return chk();">
+                    <font color=#000000 size="5">Welcome to apply for membership!</font>
+                    <br><br>
+                    <font color=#000000>Please fill out the form,thank you!</font>
+                    <br><br>
+                    <img src="1.gif" width="250" height="75"/>
+                    <br><br>
+                    <font color=#000000>Id<font color="#F80202" size="5">*</font>: </font><input type="text" name="id"/>
+                    <br><br>
+                    <font color=#000000>Password<font color="#F80202" size="5">*</font>: </font><input type="text" name="password"/>
+                    <br><br>
+                    <font color=#000000>Name<font color="#F80202" size="5">*</font>: </font><input type="text" name="name"/>
+                    <br><br>
+                    <font color=#000000>Birthday: </font><input type="date" name="birthday"/>
+                    <br><br>
+                    <font color=#000000>Telephone<font color="#F80202" size="5">*</font>: </font>
+                    <input type="text" name="telephone"/>
+                    <br><br>
+                    <font color=#000000>Email<font color="#F80202" size="5">*</font>: </font>
+                    <input type="text" name="email"/>
+                    <br><br>
+                    <font color=#000000>address<font color="#F80202" size="5">*</font>: </font><input type="text" name="address"/>
+                    <br><br>
+
+                    <input type="submit" name="submit" value="submit" />
+                    <input type="reset" value="reset"/>
+                    </form>
+							
+					
+				</div>
+				<!-- end of slider --> 
+				<!-- start of featured-->
+				
+				<!-- end of featured--> 
+				<!-- start of section-->
+				
+				</div>
+				<!-- end of section--> 
+				<!-- start of article comment-->
+				
+				<!-- end of article comment--> 
+			</div>
+			<!-- end of class content -->
+			<div id="footer">
+				
+			</div>
+		</div>
+		<!-- end of ID content--> 
+	</div>
+</body>
+</html>
